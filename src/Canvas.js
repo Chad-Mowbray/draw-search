@@ -1,16 +1,10 @@
-
 import React from "react";
 import { ReactSketchCanvas } from "react-sketch-canvas";
  
-const styles = {
-
-  margin: "50px"
-};
  
 class Canvas extends React.Component {
   constructor(props) {
     super(props);
-
     this.canvas = React.createRef();
   }
 
@@ -20,14 +14,12 @@ class Canvas extends React.Component {
 
   preProcess(data){
     let cleaned = data.map( line => line.paths.map(point => [Math.floor(Math.round(point.x * 100 ) / 100), Math.floor(Math.round(point.y * 100) / 100)] ))
-    // console.log(cleaned)
     return cleaned
-
   }
 
   postPicData(processedData) {
     console.log(processedData)
-    fetch("http://localhost:8000/process/", {
+    fetch("https://draw-search-api.herokuapp.com/process/process/", {
       method: "POST",
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify(processedData)
