@@ -19,7 +19,7 @@ class Canvas extends React.Component {
 
   postPicData(processedData) {
     console.log(processedData)
-    fetch("https://draw-search-api.herokuapp.com/process/process/", {
+    fetch("https://draw-search-api.herokuapp.com/process/", {
       method: "POST",
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify(processedData)
