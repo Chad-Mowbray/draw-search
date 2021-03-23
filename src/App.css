@@ -1,0 +1,29 @@
+.App {
+  text-align: center;
+}
+
+button {
+  width: 99px;
+  margin: 2px;
+}
+
+.center-within {
+  margin-left: 30px;
+  padding-left: 38px;
+  }
+
+.colored {
+  background-color: rgb(245, 240, 247);
+  width: 175px;
+  height: 250px;
+  box-shadow: 10px 10px 8px #888888;
+}
+
+.top-margin {
+  margin-top: 30px;
+}
+
+.message {
+  text-align: center;
+  margin-right: 38px;
+}
